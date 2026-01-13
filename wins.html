@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
+	<meta name="created" content="2026-01-12T22:05:48.743414611"/>
+	<meta name="changed" content="2026-01-12T22:06:53.206583434"/>
+	<style type="text/css">
+		@page { size: 21.59cm 27.94cm; margin: 2cm }
+		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
+	</style>
+</head>
+<body lang="en-CA" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0cm">
+&lt;!DOCTYPE html&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;html lang=&quot;en&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;head&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;meta
+charset=&quot;UTF-8&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;meta
+name=&quot;viewport&quot; content=&quot;width=device-width,
+initial-scale=1.0&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;title&gt;Your
+Daily Wins&lt;/title&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;script
+crossorigin
+src=&quot;https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js&quot;&gt;&lt;/script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;script
+crossorigin
+src=&quot;https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;script
+src=&quot;https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js&quot;&gt;&lt;/script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;script
+src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/head&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;body&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;div
+id=&quot;root&quot;&gt;&lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;script
+type=&quot;text/babel&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        const {
+useState, useEffect } = React;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        // Lucide
+icons as inline SVGs</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        const Check
+= ({ className }) =&gt; (</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;svg
+className={className} width=&quot;24&quot; height=&quot;24&quot;
+viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot;
+stroke=&quot;currentColor&quot; strokeWidth=&quot;2&quot;
+strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;polyline points=&quot;20 6 9 17 4 12&quot;&gt;&lt;/polyline&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;/svg&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        );</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        const
+Sparkles = ({ className }) =&gt; (</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;svg
+className={className} width=&quot;24&quot; height=&quot;24&quot;
+viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot;
+stroke=&quot;currentColor&quot; strokeWidth=&quot;2&quot;
+strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;path d=&quot;m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813
+1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1
+1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z&quot;&gt;&lt;/path&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;path d=&quot;M5 3v4&quot;&gt;&lt;/path&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;path d=&quot;M19 17v4&quot;&gt;&lt;/path&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;path d=&quot;M3 5h4&quot;&gt;&lt;/path&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;path d=&quot;M17 19h4&quot;&gt;&lt;/path&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;/svg&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        );</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        const Trophy
+= ({ className }) =&gt; (</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;svg
+className={className} width=&quot;24&quot; height=&quot;24&quot;
+viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot;
+stroke=&quot;currentColor&quot; strokeWidth=&quot;2&quot;
+strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;path d=&quot;M6 9H4.5a2.5 2.5 0 0 1 0-5H6&quot;&gt;&lt;/path&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;path d=&quot;M18 9h1.5a2.5 2.5 0 0 0 0-5H18&quot;&gt;&lt;/path&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;path d=&quot;M4 22h16&quot;&gt;&lt;/path&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;path d=&quot;M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7
+20.24 7 22&quot;&gt;&lt;/path&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;path d=&quot;M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17
+20.24 17 22&quot;&gt;&lt;/path&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;path d=&quot;M18 2H6v7a6 6 0 0 0 12 0V2Z&quot;&gt;&lt;/path&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;/svg&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        );</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        const
+Calendar = ({ className }) =&gt; (</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;svg
+className={className} width=&quot;24&quot; height=&quot;24&quot;
+viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot;
+stroke=&quot;currentColor&quot; strokeWidth=&quot;2&quot;
+strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;rect x=&quot;3&quot; y=&quot;4&quot; width=&quot;18&quot;
+height=&quot;18&quot; rx=&quot;2&quot; ry=&quot;2&quot;&gt;&lt;/rect&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;line x1=&quot;16&quot; y1=&quot;2&quot; x2=&quot;16&quot;
+y2=&quot;6&quot;&gt;&lt;/line&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;line x1=&quot;8&quot; y1=&quot;2&quot; x2=&quot;8&quot;
+y2=&quot;6&quot;&gt;&lt;/line&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;line x1=&quot;3&quot; y1=&quot;10&quot; x2=&quot;21&quot;
+y2=&quot;10&quot;&gt;&lt;/line&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;/svg&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        );</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        const
+DailyChallengeTracker = () =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+creativeIdeas = [</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Doodle for 2 minutes',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Take a photo of something beautiful',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Write 3 sentences about anything',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Rearrange something on your desk',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Color in a coloring book',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Make up a silly song',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Dance to one song',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                'Try
+a new recipe twist',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Snap a selfie with a fun filter',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Write down a dream you remember'</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            ];</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+selfCareIdeas = [</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Take 3 deep breaths',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Stretch for 2 minutes',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Listen to your favorite song',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Make yourself a nice drink',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                'Put
+on lotion or lip balm',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Look out the window for a minute',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Text someone you love',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Tidy one small space',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Light a candle or open a window',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'Give yourself a compliment'</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            ];</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+initialChallenges = [</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                {
+id: 1, category: 'Wellness', text: 'Drink 3 glasses of water',
+completed: false, emoji: '💧' },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                {
+id: 2, category: 'Wellness', text: 'Take your meds', completed:
+false, emoji: '💊' },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                {
+id: 3, category: 'Movement', text: 'Move your body for 10 min',
+completed: false, emoji: '🚶‍♀️' },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                {
+id: 4, category: 'Creative', text: 'Choose a creative challenge',
+completed: false, emoji: '🎨', type: 'creative' },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                {
+id: 5, category: 'Self-Care', text: 'Choose a self-care moment',
+completed: false, emoji: '✨', type: 'selfcare' },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                {
+id: 6, category: 'Mindful', text: '5 min breathing or meditation',
+completed: false, emoji: '🧘‍♀️' },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            ];</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+[challenges, setChallenges] = useState(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+const saved = localStorage.getItem('dailyChallenges');</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+return saved ? JSON.parse(saved) : initialChallenges;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            });</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+[streak, setStreak] = useState(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+const saved = localStorage.getItem('streak');</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+return saved ? parseInt(saved) : 0;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            });</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+[points, setPoints] = useState(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+const saved = localStorage.getItem('points');</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+return saved ? parseInt(saved) : 0;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            });</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+[lastResetDate, setLastResetDate] = useState(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+return localStorage.getItem('lastResetDate') || new
+Date().toDateString();</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            });</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+[showConfetti, setShowConfetti] = useState(false);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+[expandedIdea, setExpandedIdea] = useState(null);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+[selectedCreative, setSelectedCreative] = useState(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+return localStorage.getItem('selectedCreative') || null;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            });</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+[selectedSelfCare, setSelectedSelfCare] = useState(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+return localStorage.getItem('selectedSelfCare') || null;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            });</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+useEffect(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+const today = new Date().toDateString();</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                if
+(lastResetDate !== today) {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+const wasAllCompleted = challenges.every(c =&gt; c.completed);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+if (wasAllCompleted) {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   setStreak(prev =&gt; prev + 1);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+setChallenges(initialChallenges);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+setSelectedCreative(null);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+setSelectedSelfCare(null);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+setLastResetDate(today);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+localStorage.setItem('lastResetDate', today);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+localStorage.removeItem('selectedCreative');</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+localStorage.removeItem('selectedSelfCare');</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            }, []);</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+useEffect(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+localStorage.setItem('dailyChallenges', JSON.stringify(challenges));</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            },
+[challenges]);</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+useEffect(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+localStorage.setItem('streak', streak.toString());</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            },
+[streak]);</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+useEffect(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+localStorage.setItem('points', points.toString());</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            },
+[points]);</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+useEffect(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                if
+(selectedCreative) {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+localStorage.setItem('selectedCreative', selectedCreative);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            },
+[selectedCreative]);</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+useEffect(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                if
+(selectedSelfCare) {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+localStorage.setItem('selectedSelfCare', selectedSelfCare);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            },
+[selectedSelfCare]);</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+completedCount = challenges.filter(c =&gt; c.completed).length;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+totalCount = challenges.length;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+progress = (completedCount / totalCount) * 100;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+selectChallenge = (challengeId, type, selectedText) =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                if
+(type === 'creative') {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+setSelectedCreative(selectedText);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                }
+else if (type === 'selfcare') {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+setSelectedSelfCare(selectedText);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+setChallenges(challenges.map(c =&gt; 
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+c.id === challengeId ? { ...c, text: selectedText } : c</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                ));</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+setExpandedIdea(null);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            };</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+toggleChallenge = (id) =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+const challenge = challenges.find(c =&gt; c.id === id);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+const wasCompleted = challenge.completed;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+setChallenges(challenges.map(c =&gt; 
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+c.id === id ? { ...c, completed: !c.completed } : c</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                ));</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                if
+(!wasCompleted) {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+setPoints(prev =&gt; prev + 1);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+setShowConfetti(true);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+setTimeout(() =&gt; setShowConfetti(false), 1000);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                }
+else {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+setPoints(prev =&gt; Math.max(0, prev - 1));</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                if
+(expandedIdea === id) {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+setExpandedIdea(null);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            };</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            return (</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                &lt;div
+className=&quot;min-h-screen bg-gradient-to-br from-purple-50
+via-pink-50 to-blue-50 p-4 sm:p-8&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+&lt;div className=&quot;max-w-2xl mx-auto&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   &lt;div className=&quot;text-center mb-8&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;h1 className=&quot;text-4xl font-bold text-purple-900 mb-2
+flex items-center justify-center gap-2&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           &lt;Sparkles className=&quot;text-pink-500&quot; /&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           Your Daily Wins</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           &lt;Sparkles className=&quot;text-pink-500&quot; /&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;/h1&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;p className=&quot;text-gray-600&quot;&gt;Small steps, big
+impact 💜&lt;/p&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   &lt;div className=&quot;bg-white rounded-2xl shadow-lg p-6 mb-6&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;div className=&quot;flex items-center justify-between
+mb-3&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           &lt;span className=&quot;text-lg font-semibold
+text-gray-700&quot;&gt;Today's Progress&lt;/span&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           &lt;div className=&quot;flex items-center gap-4&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               &lt;div className=&quot;text-center&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                   &lt;div className=&quot;text-xs
+text-gray-500&quot;&gt;Points&lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                   &lt;div className=&quot;text-2xl font-bold
+text-pink-600&quot;&gt;⭐ {points}&lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               &lt;span className=&quot;text-2xl font-bold
+text-purple-600&quot;&gt;{completedCount}/{totalCount}&lt;/span&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;div className=&quot;w-full bg-gray-200 rounded-full h-4
+overflow-hidden&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           &lt;div 
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               className=&quot;bg-gradient-to-r from-purple-500
+to-pink-500 h-4 rounded-full transition-all duration-500 ease-out&quot;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               style={{ width: `${progress}%` }}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           /&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       {completedCount === totalCount &amp;&amp; totalCount &gt; 0 &amp;&amp;
+(</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           &lt;div className=&quot;mt-4 text-center&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               &lt;Trophy className=&quot;inline-block
+text-yellow-500 w-8 h-8 animate-bounce&quot; /&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               &lt;p className=&quot;text-lg font-bold
+text-purple-600 mt-2&quot;&gt;Amazing! All done! 🎉&lt;/p&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       )}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   &lt;div className=&quot;space-y-3&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       {challenges.map((challenge) =&gt; (</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           &lt;div key={challenge.id}&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               &lt;button</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                   onClick={() =&gt; toggleChallenge(challenge.id)}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                   className={`w-full text-left p-5 rounded-xl
+transition-all duration-300 transform hover:scale-102 ${</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                       challenge.completed</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           ? 'bg-gradient-to-r from-green-400
+to-emerald-400 shadow-md'</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           : 'bg-white hover:shadow-lg'</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                   }`}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               &gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                   &lt;div className=&quot;flex items-center gap-4&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                       &lt;div className={`flex-shrink-0 w-12 h-12
+rounded-full flex items-center justify-center text-2xl ${</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           challenge.completed ? 'bg-white' :
+'bg-purple-100'</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                       }`}&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           {challenge.completed ? &lt;Check
+className=&quot;text-green-600 w-6 h-6&quot; /&gt; : challenge.emoji}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                       &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                       &lt;div className=&quot;flex-1&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           &lt;div className=&quot;text-xs
+font-semibold text-purple-600 mb-1&quot;&gt;{challenge.category}&lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           &lt;div className={`text-lg font-medium ${</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                               challenge.completed ? 'text-white
+line-through' : 'text-gray-800'</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           }`}&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                               {challenge.text}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           {challenge.type &amp;&amp;
+!challenge.completed &amp;&amp; (</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                               &lt;button</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                                   onClick={(e) =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                                       e.stopPropagation();</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                                       setExpandedIdea(challenge.id);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                                   }}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                                   className=&quot;text-xs
+text-purple-500 hover:text-purple-700 mt-1 underline&quot;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                               &gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                                   {challenge.type === 'creative' &amp;&amp;
+!selectedCreative ? 'Pick your challenge!' : 
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                                    challenge.type === 'selfcare' &amp;&amp;
+!selectedSelfCare ? 'Pick your challenge!' : 
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                                    'Change challenge'}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                               &lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           )}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                       &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                   &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               &lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               {challenge.type &amp;&amp; expandedIdea ===
+challenge.id &amp;&amp; !challenge.completed &amp;&amp; (</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                   &lt;div className=&quot;mt-2 bg-purple-50
+rounded-xl p-4&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                       &lt;p className=&quot;text-sm font-semibold
+text-purple-700 mb-2&quot;&gt;Pick one to do today:&lt;/p&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                       &lt;div className=&quot;grid grid-cols-1
+gap-2&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           {(challenge.type === 'creative' ?
+creativeIdeas : selfCareIdeas).map((idea, idx) =&gt; (</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                               &lt;button</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                                   key={idx}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                                   onClick={() =&gt;
+selectChallenge(challenge.id, challenge.type, idea)}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                                   className=&quot;text-sm text-left
+text-gray-700 bg-white hover:bg-purple-100 rounded-lg px-3 py-2
+transition-colors&quot;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                               &gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                                   • {idea}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                               &lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           ))}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                       &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                       &lt;button</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           onClick={() =&gt; setExpandedIdea(null)}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           className=&quot;text-xs text-purple-500
+hover:text-purple-700 mt-3 underline&quot;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                       &gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                           Cancel</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                       &lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+                   &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+               )}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       ))}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   &lt;div className=&quot;mt-8 text-center bg-white rounded-2xl
+shadow-lg p-6&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;Calendar className=&quot;inline-block text-purple-500 w-6
+h-6 mb-2&quot; /&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;p className=&quot;text-gray-600&quot;&gt;Perfect Days
+Streak&lt;/p&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;p className=&quot;text-4xl font-bold text-purple-600
+mt-2&quot;&gt;{streak} 🔥&lt;/p&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   {showConfetti &amp;&amp; (</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;div className=&quot;fixed inset-0 pointer-events-none flex
+items-center justify-center&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+           &lt;div className=&quot;text-6xl animate-ping&quot;&gt;⭐&lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   )}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+&lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+&lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            );</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        };</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">       
+ReactDOM.render(&lt;DailyChallengeTracker /&gt;,
+document.getElementById('root'));</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;/script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/body&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/html&gt;</p>
+</body>
+</html>
